@@ -1,0 +1,89 @@
+.concept {
+    position: relative;
+    background-color: $light-beige;
+    .under-bgc {
+        background-color: $dark-beige; 
+        position: absolute;
+        top: 42%;
+        height: 58%;
+        width: 100%;
+        z-index: -10;
+    }
+    &__img {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .fir-img {
+            width: 63%;
+            @include tab {
+                width: 49%;
+                object-fit: cover;
+                object-position: 85%;
+            }
+        }
+        .sec-img {
+            width: 35%;
+            @include tab {
+                width: 49%;
+            }
+        }
+        margin-bottom: 70px;
+        @include tab {
+            margin-bottom: 50px;
+        }
+        &__fir {
+            background-image: url(../img/concept-1.png);
+            background-size: cover;
+            width: 63%;
+            @include tab {
+                width: 49%;
+            }
+        }
+        &__sec {
+            background-image: url(../img/concept-2.png);
+            background-size: cover;
+            width: 36%;
+            @include tab {
+                width: 49%;
+            }
+        }
+    }
+    &__text {
+        width: 72%;
+        height: 110px;
+        display: flex;
+        color: white;
+        margin: 0 auto;
+        @include tab {
+            height: 175px;
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+        }
+        @include sp {
+            height: 150px;
+        }
+        &__head {
+            width: 48%;
+            font-size: 4rem;
+            margin-top: 22px;
+            font-family: "ヒラギノ明朝 Pro", serif;
+            @include tab {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            @include sp {
+                font-size: 1.8rem;
+                margin-bottom: 18px;;
+            }
+        }
+        &__par {
+            width: 45%;
+            font-family: ヒラギノ角ゴ Pro, sans-serif;
+            @include tab {
+                width: 100%;
+            }
+        }
+    }
+}
